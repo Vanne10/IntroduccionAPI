@@ -1,0 +1,25 @@
+{
+  "name": "apiexpress",
+  "version": "1.0.0",
+  "description": "aplicacion apis con express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vanne10/IntroduccionAPI.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "vanessa burrola soto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vanne10/IntroduccionAPI/issues"
+  },
+  "homepage": "https://github.com/Vanne10/IntroduccionAPI#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
