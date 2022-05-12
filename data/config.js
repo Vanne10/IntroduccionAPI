@@ -10,6 +10,6 @@ const config = {
 
 //Create a MySQL pool
 const pool = mysql.createPool(config);
-
+//nuevo commit
 //Export the pool
 module.exports = pool;
