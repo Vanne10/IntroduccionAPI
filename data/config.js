@@ -1,15 +1,28 @@
-const mysql = require('mysql');
+const sql= require('mssql');
 
-//Set database connection credentials
-const config = {
-    host: 'localhost',
-    user: 'api',
-    password: 'api',
+
+// set database connection credentials
+const config ={
+     user: 'vane',
+    password: 'password',
+    server: 'localhost',
     database: 'api',
-};
+    options: {
+    trustServerCertificate: true
+    }
+} ;
+ //create a MSSQL pool
+const pool = {
+    query: function(query, callback) {
+        sql.connect(config).then((pool) => {
+            return pool.query(query);
+        }).then(result => {
+            callback(null, result);
+        }).catch(err => {
+            callback(err, null);
+        });
+    }
+}
 
-//Create a MySQL pool
-const pool = mysql.createPool(config);
-
-//Export the pool
-module.exports = pool;
+// Export the pool
+module.exports=pool;
