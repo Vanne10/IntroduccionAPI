@@ -1,6 +1,5 @@
 const sql = require('mssql');
 
-// set database connection credentials
 const config = {
     user: 'vane',
     password: 'password',
@@ -10,7 +9,7 @@ const config = {
         trustServerCertificate: true
     }
 };
-//create a MSSQL pool
+
 const pool = {
     query: function (query, callback) {
         sql.connect(config).then((pool) => {
@@ -22,5 +21,5 @@ const pool = {
         });
     }
 }
-// Export the pool
+
 module.exports = pool;
