@@ -5,7 +5,6 @@ const config = {
     password: 'password',
     server: 'localhost',
     database: 'api',
-
     options: {
         trustServerCertificate: true
     }
